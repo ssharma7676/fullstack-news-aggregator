@@ -39,6 +39,7 @@
   border-radius: 12px;
   border: 1px solid #b6ad99;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  object-fit: cover;
 
   filter: grayscale(0.15) sepia(0.2) contrast(0.85) brightness(0.97);
   opacity: 0.92;
