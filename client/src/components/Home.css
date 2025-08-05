@@ -1,0 +1,111 @@
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Logo Link Behavior & Active States
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.logo a,
+.logo-link,
+.home-title a {
+  text-decoration: none !important;
+}
+
+.logo-link.home-active,
+.logo-link.clicked {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Homepage Container & Grain Texture
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 4rem 2rem;
+  background-color: var(--color-paper);
+  background-image: url('grain-texture.svg');
+  background-repeat: repeat;
+  background-blend-mode: multiply;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Header Block: Title & Tagline
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.home-header {
+  text-align: center;
+  max-width: 800px;
+}
+
+.home-title {
+  font-family: var(--font-headline);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  text-decoration: none !important;
+}
+
+.home-title span {
+  color: var(--color-accent);
+  opacity: 0.8;
+  text-decoration: none !important;
+}
+
+.home-tagline {
+  font-size: 1.125rem;
+  color: var(--color-muted);
+  font-weight: 500;
+  font-family: var(--font-body);
+  margin-bottom: 2rem;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CTA Button Styling
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.home-button {
+  font-size: 0.95rem;
+  font-family: var(--font-headline);
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  padding: 0.6rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-paper);
+  transform: scale(1.03);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  text-decoration: none !important;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Title Animation: Fade-In per Letter
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.title-letter {
+  display: inline-block;
+  opacity: 0.2;
+  transform: translateY(20%) scale(0.95);
+  animation: letterFadeSolid 0.5s forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes letterFadeSolid {
+  0% {
+    opacity: 0.2;
+    transform: translateY(20%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

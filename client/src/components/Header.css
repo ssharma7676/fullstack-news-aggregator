@@ -1,0 +1,445 @@
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Root Variables: Typography & Theme
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+:root {
+  --accent-color: #816B9C;
+  --hover-bg: #f0eef5;
+  --header-bg: rgba(28, 28, 28, 0.9);
+  --header-border: #d6d1bf;
+  --dropdown-bg: #fbfbf9;
+  --dropdown-border: #e2dcd2;
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Libre Baskerville', serif;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Header: Fixed Navigation Container
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.header {
+  width: 100%;
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.nav-container {
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Logo Block: Branding Typography
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.logo {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #fefefe;
+  user-select: none;
+  margin-left: 0.5rem;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-faded {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+  opacity: 1;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Navigation Structure: Left / Center / Right
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.nav-left {
+  margin-left: 3rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-center {
+  flex: 3.2;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 3rem;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Menu & Links: Typography + Interactions
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  font-family: 'Crimson Text', serif;
+  font-weight: 550;
+  color: #f5f5f5;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-center > .nav-menu > li > .nav-link,
+.nav-center > .nav-menu > li > .dropdown-toggle,
+.nav-link {
+  font-family: 'Crimson Text', serif;
+  font-weight: 550;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #f5f5f5;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+  color: var(--accent-color);
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Dropdown: Toggle + Hover Styling
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Crimson Text', serif;
+  font-size: 0.8rem;
+  font-weight: 550;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  display: flex;
+  align-items: center;
+  color: #f5f5f5;
+  border-radius: 4px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.dropdown-toggle:hover,
+.dropdown:hover .dropdown-toggle,
+.dropdown-menu.show ~ .dropdown-toggle {
+  color: var(--accent-color);
+  background-color: transparent;
+  border-bottom: none;
+}
+
+.nav-menu > li > .dropdown-toggle:hover,
+.nav-menu > li > .dropdown-toggle:focus,
+.nav-menu > li > .nav-link:hover,
+.nav-menu > li > .nav-link:focus {
+  color: var(--accent-color);
+}
+
+.nav-menu > li > .dropdown-toggle.active-tab,
+.nav-menu > li > .nav-link.active-tab {
+  color: var(--accent-color);
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Dropdown Arrow Indicator
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.dropdown-arrow {
+  margin-top: 0.6rem;
+  margin-left: 0.35rem;
+  font-family: serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #666666;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.dropdown-toggle:hover .dropdown-arrow {
+  color: var(--accent-color);
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Dropdown Menus: Visibility + Structure
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: var(--dropdown-bg);
+  color: #333;
+  border: 1px solid var(--dropdown-border);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(50, 50, 50, 0.06);
+  padding: 0.25rem 0;
+  min-width: 12rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+}
+
+.dropdown-menu.show,
+.nav-menu li.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dropdown-menu li {
+  width: 100%;
+  list-style: none;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 0.65rem 1rem;
+  font-family: 'Crimson Text', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown-link:hover {
+  background-color: var(--hover-bg);
+  color: var(--accent-color);
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Country Dropdown: Extended Menu
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.country-menu {
+  max-height: 15rem;
+  overflow-y: auto;
+  min-width: 14rem;
+  border-top: 1px solid #ccc;
+  padding-top: 0.25rem;
+}
+
+.country-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  padding: 0.65rem 1rem;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.country-link:hover {
+  background-color: var(--hover-bg);
+  color: var(--accent-color);
+}
+
+.flag-icon {
+  width: 24px;
+  height: 18px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   User Menu Interaction & Profile
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.user-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fefefe;
+  border-radius: 6px;
+  transition: color 0.3s ease;
+  margin-top: 4px;
+}
+
+.user-icon-button:hover,
+.user-icon-button:focus,
+.user-icon-button:active {
+  color: #a18fc9;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   User Avatar Badge: Visual Identity
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.avatar-badge {
+  background-color: var(--accent-color, #816B9C);
+  color: #fffef8;
+  font-size: 0.9rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow:
+    0 0 0 1px rgba(238, 225, 203, 0.4),
+    0 0 6px rgba(129, 107, 156, 0.5); 
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.avatar-badge:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 0 1px rgba(238, 225, 203, 0.4),
+    0 0 6px rgba(129, 107, 156, 0.5);
+  background-color: #a18fc9;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   User Dropdown Menu
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.user-dropdown-menu {
+  position: absolute;
+  right: 1rem;
+  top: 100%;
+  margin-top: 0.6rem;
+  background: #fffef8;
+  border: 1px solid #d8d2c4;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 140px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.user-dropdown-menu li {
+  list-style: none;
+}
+
+.user-dropdown-menu li:not(:last-child) {
+  border-bottom: 1px solid #ece7dd;
+}
+
+.user-dropdown-menu .dropdown-link,
+.user-dropdown-menu .logout-btn {
+  display: block;
+  padding: 0.7rem 1rem;
+  color: #5b4d3f;
+  font-family: 'Crimson Text', serif;
+  font-size: 0.95rem;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-dropdown-menu .dropdown-link:hover,
+.user-dropdown-menu .logout-btn:hover {
+  background-color: #f3f0eb;
+  color: #3f3f3f;
+}
+
+.dropdown-username {
+  padding: 0.5rem 1rem;
+  font-family: 'Crimson Text', serif;
+  font-size: 0.9rem;
+  color: #4a3f30;
+  border-bottom: 1px solid #d8d2c4;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Modal Blur Overlay
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.blur-overlay {
+  position: fixed;
+  top: 90px; 
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 900;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Hamburger Menu Button
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.hamburger-btn {
+  font-size: 1.6rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-right: 1rem;
+  margin-bottom: 0.8rem;
+  color: #fefefe;
+  transition: color 0.3s ease;
+}
+
+.hamburger-btn:hover,
+.hamburger-btn:focus {
+  color: var(--clr-accent-rose, #816B9C);
+  outline: none;
+}
+
+.hamburger-btn:focus-visible {
+  outline: 2px solid var(--clr-accent-rose, #816B9C);
+  outline-offset: 2px;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Navigation Tab Indicator
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.active-tab {
+  color: var(--accent-color);
+  font-weight: bold;
+  border-bottom: 2px solid var(--highlight-color);
+}
