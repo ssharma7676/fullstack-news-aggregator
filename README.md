@@ -4,18 +4,18 @@ The Daily Scroll is a modern, full-stack news aggregator built with React, Node.
 
 ---
 
-## Motivation
+## 🎯 Motivation
 
 In today's information-heavy world, staying informed while avoiding news fatigue is challenging. I created The Daily Scroll to streamline news consumption by aggregating quality sources, providing AI summaries for quick scanning, and allowing users to save important or interesting articles for later reading.
 
-## Potential Impact
+## 🚀 Potential Impact
 
 The Daily Scroll can help users stay better informed while saving time, reduce information overload through intelligent summarization, and create a more personalized news experience that adapts to individual reading preferences and habits.
 
 
 ---
 
-## Key Features
+## ✨ Key Features
 
 - User Authentication with JWT-based token security.
 - Dynamic news fetching via NewsAPI including:
@@ -29,7 +29,7 @@ The Daily Scroll can help users stay better informed while saving time, reduce i
 
 ---
 
-## Tech Stack
+## 🛠 Tech Stack
 
 Frontend: React, React Router, Context API, CSS  
 Backend: Node.js, Express, MongoDB (Mongoose), JWT Authentication  
@@ -37,7 +37,7 @@ External APIs: NewsAPI, Summarization API (custom or third-party)
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 /client  
   - components (Header, Sidebar, Card, Loader, etc.)  
@@ -52,7 +52,7 @@ External APIs: NewsAPI, Summarization API (custom or third-party)
 
 ---
 
-## Getting Started
+## ⚙️ Getting Started
 
 ### Prerequisites
 
@@ -92,7 +92,7 @@ API_KEY=your_newsapi_key
 
 ---
 
-## Usage
+## 🖥 Usage
 
 - Register or log in to your account.  
 - Browse news by category or country.  
@@ -103,7 +103,7 @@ API_KEY=your_newsapi_key
 
 ---
 
-## Security
+## 🔒 Security
 
 - Passwords are securely hashed (backend logic assumed).  
 - JWT tokens secure API endpoints and protect user data.  
@@ -111,6 +111,6 @@ API_KEY=your_newsapi_key
 
 ---
 
-## License
+## 📄 License
 
 MIT License © 2025
