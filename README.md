@@ -1,12 +1,17 @@
 # The Daily Scroll
 
-A modern, full-stack news aggregator offering personalized news, bookmarks, and AI-powered summaries.
+The Daily Scroll is a modern, full-stack news aggregator built with React, Node.js, Express, and MongoDB. It delivers curated news content from multiple sources with features such as user authentication, bookmarking articles, and AI-generated article summaries.
 
 ---
 
-## Overview
+## Motivation
 
-The Daily Scroll is a sophisticated web application built with React, Node.js, Express, and MongoDB. It delivers curated news content from multiple sources with features such as user authentication, bookmarking articles, and AI-generated article summaries.
+In today's information-heavy world, staying informed while avoiding news fatigue is challenging. I created The Daily Scroll to streamline news consumption by aggregating quality sources, providing AI summaries for quick scanning, and allowing users to save important or interesting articles for later reading.
+
+## Potential Impact
+
+The Daily Scroll can help users stay better informed while saving time, reduce information overload through intelligent summarization, and create a more personalized news experience that adapts to individual reading preferences and habits.
+
 
 ---
 
